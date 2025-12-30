@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninth Story Labs — Digital Innovation</title>
+    <meta name="description" content="Web development, consulting, and experimental projects. Building digital products and exploring new ideas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --text: #e8e8e8;
+            --text-muted: #999;
+            --accent: #4a9eff;
+            --border: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .logo .num {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: color 0.2s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Main content wrapper */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 4rem 0 3rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h1 strong {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        /* Section styling */
+        section {
+            padding: 4rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        h2 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Projects grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            padding: 1.5rem 0;
+        }
+
+        .project-type {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .project h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .project p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Labs section */
+        .labs-intro {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .experiment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .experiment {
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .experiment:hover {
+            border-color: var(--accent);
+        }
+
+        .experiment-label {
+            font-family: 'IBM Plex Mono', monospace;
+            color: var(--accent);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .experiment h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .experiment p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .experiment a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .experiment a:hover {
+            opacity: 0.7;
+        }
+
+        .experiment a::after {
+            content: ' →';
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 5%;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--text);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            display: inline;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .project-grid,
+            .experiment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="num">9th</span> Story Labs
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/ninthstorylabs" target="_blank" title="GitHub">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+            <a href="https://twitter.com/ninthstorylabs" target="_blank" title="Twitter">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/company/ninthstorylabs" target="_blank" title="LinkedIn">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>
+                Building digital products.<br>
+                <strong>Experimenting</strong> with new ideas.
+            </h1>
+            <p class="tagline">
+                We develop websites and apps, consult on software and AI, trade domains, and run experiments that push boundaries.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>What We Do</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <div class="project-type">Development</div>
+                    <h3>Web & App Development</h3>
+                    <p>Custom applications built with modern frameworks. React, Vue, Node.js, Python. Full-stack solutions from design through deployment.</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-type">Consulting</div>
+                    <h3>Software & AI Consulting</h3>
+                    <p>Corporate training and consulting in software development, AI implementation, testing methodologies, and development best practices.</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-type">Domains</div>
+                    <h3>Domain Portfolio</h3>
+                    <p>Strategic acquisition and sales of digital assets. Market analysis, trend prediction, and portfolio management.</p>
+                </div>
+
+                <div class="project">
+                    <div class="project-type">Innovation</div>
+                    <h3>Product Experiments</h3>
+                    <p>Testing new technologies, validating concepts, and exploring emerging platforms. Building things that might not exist yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="labs">
+            <h2>The Labs</h2>
+            <p class="labs-intro">
+                Our experimental space for open source projects, side projects, and ideas that might be too weird for clients but too interesting to ignore. This is where we learn by building.
+            </p>
+
+            <div class="experiment-grid">
+                <div class="experiment">
+                    <span class="experiment-label">Open Source</span>
+                    <h4>DevTest Toolkit</h4>
+                    <p>A collection of developer testing utilities and automation scripts. MIT licensed, community maintained.</p>
+                    <a href="https://github.com/ninthstorylabs/devtest-toolkit">View on GitHub</a>
+                </div>
+
+                <div class="experiment">
+                    <span class="experiment-label">Experiment</span>
+                    <h4>AI Content Generator</h4>
+                    <p>Exploring the boundaries of AI-generated content. Testing different models, prompts, and output formats.</p>
+                    <a href="https://experiments.ninthstorylabs.com/ai-content">Try it out</a>
+                </div>
+
+                <div class="experiment">
+                    <span class="experiment-label">Open Source</span>
+                    <h4>API Mock Factory</h4>
+                    <p>Generate realistic mock APIs for frontend development. Zero config, instant endpoints, type-safe responses.</p>
+                    <a href="https://github.com/ninthstorylabs/api-mock-factory">View on GitHub</a>
+                </div>
+
+                <div class="experiment">
+                    <span class="experiment-label">Experiment</span>
+                    <h4>Web Archive Project</h4>
+                    <p>Scraping and preserving interesting corners of the web. A digital archaeology project for internet culture.</p>
+                    <a href="https://archive.ninthstorylabs.com">Explore archive</a>
+                </div>
+
+                <div class="experiment">
+                    <span class="experiment-label">Experiment</span>
+                    <h4>CSS Experiments</h4>
+                    <p>Pushing CSS to its limits. Experimental layouts, animations, and techniques that challenge conventional design.</p>
+                    <a href="https://css.ninthstorylabs.com">See demos</a>
+                </div>
+
+                <div class="experiment">
+                    <span class="experiment-label">Open Source</span>
+                    <h4>Minimal CMS</h4>
+                    <p>A simple, file-based content management system. No database required, just markdown files and a build script.</p>
+                    <a href="https://github.com/ninthstorylabs/minimal-cms">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="mailto:hello@ninthstorylabs.com">hello@ninthstorylabs.com</a>
+                <p style="margin-top: 1rem;">Get in touch for project inquiries, consulting, or collaboration opportunities.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#projects">Web Development</a>
+                <a href="#projects">Corporate Training</a>
+                <a href="#projects">AI Consulting</a>
+                <a href="#projects">Domain Trading</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="footer-social">
+                    <a href="https://github.com/ninthstorylabs" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/ninthstorylabs" target="_blank">Twitter</a>
+                    <a href="https://linkedin.com/company/ninthstorylabs" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2024 Ninth Story Labs
+        </div>
+    </footer>
+</body>
+</html>
