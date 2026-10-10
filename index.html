@@ -47,7 +47,7 @@
                 "email": "hello@ninthstorylabs.com",
                 "description": "Veteran-owned studio offering web and app development, software and AI consulting, and operating niche content sites.",
                 "sameAs": ["https://github.com/ninthstorylabs"],
-                "knowsAbout": ["Web development", "App development", "Software consulting", "AI consulting", "Software testing", "Corporate training"]
+                "knowsAbout": ["Web development", "App development", "Software consulting", "AI consulting", "Local AI", "Ollama", "LLM data pipelines", "Software testing", "Corporate training"]
             },
             { "@type": "WebSite", "name": "Daily Lax Deals", "url": "https://dailylaxdeals.com", "publisher": { "@id": "https://ninthstorylabs.com/#organization" } },
             { "@type": "WebSite", "name": "Daily Coffee Deals", "url": "https://dailycoffeedeals.com", "publisher": { "@id": "https://ninthstorylabs.com/#organization" } },
@@ -63,283 +63,18 @@
         ]
     }
     </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #0ea5e9;
-            --dark: #0f172a;
-            --gray: #64748b;
-            --light-gray: #f1f5f9;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Header */
-        header {
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 6rem 0 4rem;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        h1 strong {
-            color: var(--primary);
-        }
-
-        .tagline {
-            font-size: 1.25rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-        }
-
-        /* What We Do */
-        .what-we-do {
-            padding: 4rem 0;
-            background: var(--light-gray);
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-label {
-            font-size: 0.875rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .service-card p {
-            color: var(--gray);
-            line-height: 1.7;
-        }
-
-        /* Properties */
-        .properties {
-            padding: 4rem 0;
-        }
-
-        .properties-intro {
-            text-align: center;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            font-size: 1.1rem;
-        }
-
-        .property-section {
-            margin-bottom: 4rem;
-        }
-
-        .property-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .properties-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .property-card {
-            background: white;
-            border: 2px solid var(--light-gray);
-            padding: 2rem;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .property-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .property-card.active {
-            border-color: var(--primary);
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(14, 165, 233, 0.02) 100%);
-        }
-
-        .property-card.coming-soon {
-            opacity: 0.7;
-        }
-
-        .property-status {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .status-active {
-            background: #10b981;
-            color: white;
-        }
-
-        .status-launching {
-            background: var(--primary);
-            color: white;
-        }
-
-        .status-coming {
-            background: var(--gray);
-            color: white;
-        }
-
-        .property-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .property-card p {
-            color: var(--gray);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .property-link {
-            display: inline-block;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .property-link:hover {
-            color: #0284c7;
-        }
-
-        .property-link::after {
-            content: " →";
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 0 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #94a3b8;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #334155;
-            padding-top: 2rem;
-            text-align: center;
-            color: #64748b;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .hero {
-                padding: 4rem 0 2rem;
-            }
-
-            .services-grid,
-            .properties-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-inner">
             <a href="/" class="logo" aria-label="Ninth Story Labs home">9th Story Labs</a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="/web-development/">Web Development</a>
+                <a href="/consulting/">Consulting</a>
+                <a href="/#properties">Properties</a>
+                <a href="mailto:hello@ninthstorylabs.com">Contact</a>
+            </nav>
         </div>
     </header>
 
@@ -361,11 +96,13 @@
                         <span class="service-label">Development</span>
                         <h3>Web & App Development</h3>
                         <p>Custom applications built with modern frameworks. React, Astro, Node.js, Python. Full-stack solutions from design through deployment.</p>
+                        <a href="/web-development/">Learn more &rarr;</a>
                     </div>
                     <div class="service-card">
                         <span class="service-label">Consulting</span>
                         <h3>Software & AI Consulting</h3>
-                        <p>Corporate training and consulting in software development, AI implementation, testing methodologies, and development best practices.</p>
+                        <p>Corporate training and consulting in software development, AI implementation, local AI pipelines, testing methodologies, and development best practices.</p>
+                        <a href="/consulting/">Learn more &rarr;</a>
                     </div>
                     <div class="service-card">
                         <span class="service-label">Content Sites</span>
@@ -382,7 +119,7 @@
         </section>
 
         <!-- Our Properties -->
-        <section class="properties">
+        <section class="properties" id="properties">
             <div class="container">
                 <h2>Our Properties</h2>
                 <p class="properties-intro">
@@ -445,9 +182,9 @@
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
-                    <a href="mailto:hello@ninthstorylabs.com">Consulting</a>
-                    <a href="mailto:hello@ninthstorylabs.com">Development</a>
-                    <a href="mailto:hello@ninthstorylabs.com">Training</a>
+                    <a href="/web-development/">Web Development</a>
+                    <a href="/consulting/">Software & AI Consulting</a>
+                    <a href="/consulting/#training">Training</a>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
