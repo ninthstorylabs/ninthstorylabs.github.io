@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-905XWC0GVY"></script>
 <script>
@@ -10,10 +12,57 @@
 
   gtag('config', 'G-905XWC0GVY');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ninth Story Labs — Digital Innovation</title>
-    <meta name="description" content="Building digital products. Experimenting with new ideas.">
+    <title>Ninth Story Labs | Software, AI Consulting & Niche Web Properties</title>
+    <meta name="description" content="Ninth Story Labs is a veteran-owned studio offering web and app development, software and AI consulting, and operating niche sites like Daily Lax Deals, Daily Coffee Deals, and Adapt & Invest.">
+    <link rel="canonical" href="https://ninthstorylabs.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ninth Story Labs">
+    <meta name="theme-color" content="#0ea5e9">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230ea5e9'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='white' text-anchor='middle'%3E9%3C/text%3E%3C/svg%3E">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ninth Story Labs">
+    <meta property="og:url" content="https://ninthstorylabs.com/">
+    <meta property="og:title" content="Ninth Story Labs | Software, AI Consulting & Niche Web Properties">
+    <meta property="og:description" content="Veteran-owned studio building digital products, consulting on software and AI, and operating niche sites that serve specific communities.">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ninth Story Labs | Software, AI Consulting & Niche Web Properties">
+    <meta name="twitter:description" content="Veteran-owned studio building digital products, consulting on software and AI, and operating niche sites that serve specific communities.">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://ninthstorylabs.com/#organization",
+                "name": "Ninth Story Labs",
+                "alternateName": "9th Story Labs",
+                "url": "https://ninthstorylabs.com/",
+                "email": "hello@ninthstorylabs.com",
+                "description": "Veteran-owned studio offering web and app development, software and AI consulting, and operating niche content sites.",
+                "sameAs": ["https://github.com/ninthstorylabs"],
+                "knowsAbout": ["Web development", "App development", "Software consulting", "AI consulting", "Software testing", "Corporate training"]
+            },
+            { "@type": "WebSite", "name": "Daily Lax Deals", "url": "https://dailylaxdeals.com", "publisher": { "@id": "https://ninthstorylabs.com/#organization" } },
+            { "@type": "WebSite", "name": "Daily Coffee Deals", "url": "https://dailycoffeedeals.com", "publisher": { "@id": "https://ninthstorylabs.com/#organization" } },
+            { "@type": "WebSite", "name": "Adapt & Invest", "url": "https://adaptandinvest.com", "publisher": { "@id": "https://ninthstorylabs.com/#organization" } },
+            {
+                "@type": "WebSite",
+                "@id": "https://ninthstorylabs.com/#website",
+                "url": "https://ninthstorylabs.com/",
+                "name": "Ninth Story Labs",
+                "publisher": { "@id": "https://ninthstorylabs.com/#organization" },
+                "inLanguage": "en-US"
+            }
+        ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -51,6 +100,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
+            text-decoration: none;
         }
 
         /* Hero */
@@ -160,13 +210,13 @@
 
         .property-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
             transform: translateY(-2px);
         }
 
         .property-card.active {
             border-color: var(--primary);
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(99, 102, 241, 0.02) 100%);
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(14, 165, 233, 0.02) 100%);
         }
 
         .property-card.coming-soon {
@@ -289,7 +339,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">9th Story Labs</div>
+            <a href="/" class="logo" aria-label="Ninth Story Labs home">9th Story Labs</a>
         </div>
     </header>
 
@@ -347,26 +397,19 @@
                             <span class="property-status status-active">Active</span>
                             <h4>Daily Lax Deals</h4>
                             <p>Hand-curated lacrosse equipment deals updated daily. Serving players, coaches, and parents with the best savings on quality gear.</p>
-                            <a href="https://dailylaxdeals.com" class="property-link" target="_blank">Visit site</a>
+                            <a href="https://dailylaxdeals.com" class="property-link" target="_blank" rel="noopener">Visit site</a>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Launching Q1 2025 -->
-                <div class="property-section">
-                    <h3>Launching Q1 2025</h3>
-                    <div class="properties-grid">
-                        <div class="property-card">
-                            <span class="property-status status-launching">Launching Soon</span>
+                        <div class="property-card active">
+                            <span class="property-status status-active">Active</span>
+                            <h4>Daily Coffee Deals</h4>
+                            <p>Curated daily deals on coffee equipment, beans, and accessories for home baristas and coffee enthusiasts.</p>
+                            <a href="https://dailycoffeedeals.com" class="property-link" target="_blank" rel="noopener">Visit site</a>
+                        </div>
+                        <div class="property-card active">
+                            <span class="property-status status-active">Active</span>
                             <h4>Adapt & Invest</h4>
                             <p>Free Investment Policy Statement generator for families and individual investors. Build disciplined wealth with a personalized strategy.</p>
-                            <a href="https://adaptandinvest.com" class="property-link" target="_blank">Coming soon</a>
-                        </div>
-                        <div class="property-card">
-                            <span class="property-status status-launching">Launching Soon</span>
-                            <h4>Sideline Grind</h4>
-                            <p>Resources, deals, and guides for travel sports families. Tournament tips, budgeting advice, and equipment savings across all sports.</p>
-                            <a href="https://sidelinegrind.com" class="property-link" target="_blank">Coming soon</a>
+                            <a href="https://adaptandinvest.com" class="property-link" target="_blank" rel="noopener">Visit site</a>
                         </div>
                     </div>
                 </div>
@@ -377,18 +420,8 @@
                     <div class="properties-grid">
                         <div class="property-card coming-soon">
                             <span class="property-status status-coming">Coming Soon</span>
-                            <h4>Daily Coffee Deals</h4>
-                            <p>Curated daily deals on coffee equipment, beans, and accessories for home baristas and coffee enthusiasts.</p>
-                        </div>
-                        <div class="property-card coming-soon">
-                            <span class="property-status status-coming">Coming Soon</span>
-                            <h4>Daily Garden Deals</h4>
-                            <p>Best deals on gardening tools, seeds, and supplies. Helping home gardeners save on quality equipment.</p>
-                        </div>
-                        <div class="property-card coming-soon">
-                            <span class="property-status status-coming">Coming Soon</span>
-                            <h4>Determined Dad</h4>
-                            <p>Building discipline and becoming a role model. Health, finance, DIY, and personal growth for fathers.</p>
+                            <h4>Sideline Grind</h4>
+                            <p>Resources, deals, and guides for travel sports families. Tournament tips, budgeting advice, and equipment savings across all sports.</p>
                         </div>
                     </div>
                 </div>
@@ -406,9 +439,9 @@
                 </div>
                 <div class="footer-section">
                     <h4>Properties</h4>
-                    <a href="https://dailylaxdeals.com" target="_blank">Daily Lax Deals</a>
-                    <a href="https://adaptandinvest.com" target="_blank">Adapt & Invest</a>
-                    <a href="https://sidelinegrind.com" target="_blank">Sideline Grind</a>
+                    <a href="https://dailylaxdeals.com" target="_blank" rel="noopener">Daily Lax Deals</a>
+                    <a href="https://dailycoffeedeals.com" target="_blank" rel="noopener">Daily Coffee Deals</a>
+                    <a href="https://adaptandinvest.com" target="_blank" rel="noopener">Adapt & Invest</a>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
@@ -418,12 +451,12 @@
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>
-                    <a href="https://github.com/ninthstorylabs" target="_blank">GitHub</a>
+                    <a href="https://github.com/ninthstorylabs" target="_blank" rel="noopener">GitHub</a>
                     <a href="mailto:hello@ninthstorylabs.com">Email</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Ninth Story Labs. Built with discipline.</p>
+                <p>&copy; 2026 Ninth Story Labs. Built with discipline.</p>
             </div>
         </div>
     </footer>
